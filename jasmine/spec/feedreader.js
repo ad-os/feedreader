@@ -148,12 +148,13 @@ $(function() {
 		 */
 		it('input field to search blogs', function() {
 			expect($('body').find('.search-field').length).toBe(1);
-		})
+		});
 		/*
 		 *@desc: This spec test's whether each blog on the list has author 
 		 *mentioned or not.
 		 */
 		it('author on each blog', function() {
 			expect($('.feed').find('.author').length).toBe($('.feed').find('a').length);
+		});
 	});
-}());
+}())

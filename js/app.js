@@ -62,7 +62,6 @@ function loadFeed(id, cb) {
                 entryTemplate = Handlebars.compile($('.tpl-entry').html());
             title.html(feedName);   // Set the header text
             container.empty();      // Empty out all previous entries
-            console.log(entries);
 
             /* Loop through the entries we just loaded via the Google
              * Feed Reader API. We'll then parse that entry against the
