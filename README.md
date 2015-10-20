@@ -21,7 +21,7 @@ I will learn how to use Jasmine to A number of tests against a pre-existing appl
 3. Open your browser and test.
 
 
-#  Description of the tests
+##  Description of the tests
 
 1. A test that loops through each feed in the allFeeds object and ensures it has a URL defined and that the URL is not empty.
 2. A test that loops through each feed in the allFeeds object and ensures it has a name defined and that the name is not empty.
