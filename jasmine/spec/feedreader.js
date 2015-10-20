@@ -155,6 +155,5 @@ $(function() {
 		 */
 		it('author on each blog', function() {
 			expect($('.feed').find('.author').length).toBe($('.feed').find('a').length);
-		});
 	});
 }());
