@@ -43,12 +43,11 @@ $(function() {
 		 *in allFeeds list is defined and the url is not empty.
 		 */
 		it('name is defined', function() {
-			for (var i = 0; i < allFeeds.length; i++) {
-				expect(allFeeds[i].name).toBeDefined();
-				expect(allFeeds[i].name).not.toBe('');                
-			}
+			allFeeds.forEach(function(feed) {
+				expect(feed.name).toBeDefined();
+				expect(feed.name).not.toBe('');				
+			});
 		});
-
 	});
 	/*
 	 *@desc: This suite is to check the functionality of the side-nav.
@@ -84,7 +83,7 @@ $(function() {
 			});
 		});
 		/*
-		 *@desc: This spec test's whether feed div has atleast on entry div
+		 *@desc: This spec test's whether feed div has atleast one entry div
 		 */
 		it('has atleast one entry', function(done) {
 			expect($('.feed').find('.entry').length).toBeGreaterThan(0);
@@ -104,7 +103,7 @@ $(function() {
 					newBlogHeader = $('.feed').html();
 					loadFeed(0); //Restore to original state.
 					done();
-				});  
+				});
 			});
 		});
 		/*
@@ -118,7 +117,7 @@ $(function() {
 		});
 	});
 	/*
-	 *@desc: This suite is all about the features.
+	 *@desc: This suite is all about the features which app would contain/contains.
 	 */
 	describe('Has', function() {
 		/*
@@ -127,21 +126,21 @@ $(function() {
 		 */
 		it('input field to add new feed', function() {
 			expect($('body').find('.add-feed').length).toBe(1);
-		})
+		});
 		/*
 		 *@desc: This spec test's whether each blog on the list has date 
 		 *mentioned or not.
 		 */
 		it('date on each blog', function() {
 			expect($('.feed').find('.date').length).toBe($('.feed').find('a').length);
-		})
+		});
 		/*
 		 *@desc: This spec test's whether the app has a button to sort
 		 *the blog list according to the date and time.
 		 */
 		it('has button to sort according to the date', function() {
 			expect($('body').find('.sort-button').length).toBe(1);
-		})
+		});
 		/*
 		 *@desc: This spec test's whether the app has a input field 
 		 *to search a specific blog.
